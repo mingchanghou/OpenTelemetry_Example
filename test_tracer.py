@@ -52,6 +52,7 @@ class MySocketHandle(socketserver.BaseRequestHandler):
                     request_string += recv_msg
                     if len(recv_msg) < 4096:
                         break
+                self.request.send(b'Server received request '+request_string)
                 print('request_string : \t', request_string)
                 child.set_attribute('param', str(request_string))
         print('leave MySocketHandle handle')
