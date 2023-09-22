@@ -25,6 +25,7 @@ Test OpenTelemetry trace on python socketserver
   output:<br>
   client site will see: <br>
   <code>
+  b'Server received request isAlive'
   </code>
   server site will see: <br>
   <code>
